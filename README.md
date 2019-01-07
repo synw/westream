@@ -100,6 +100,8 @@ The ui: `page.dart`:
 
    ```dart
    import 'package:westream/westream.dart';
+   import 'bloc.dart';
+   import 'models.dart';
    
    class MyPage extends StatefulWidget {
       @override
