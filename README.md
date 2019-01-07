@@ -42,7 +42,7 @@ You can do:
    Widget build(BuildContext context) {
       return Scaffold(
           body: ListStreamBuilder(
-             stream: this.bloc.items, // any stream
+             stream: this.bloc.items, // any stream that outputs a list
              listTileBuilder: (ModelItem item) {
                 return ListTile(
                    title: Text(item.name),
