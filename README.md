@@ -12,7 +12,7 @@ Instead of:
    ```dart
    @override
    Widget build(BuildContext context) {
-      return StreamBuilder<MyModel>(
+      return StreamBuilder<ModelItem>(
         stream: this.bloc.items, // any stream
         builder: (BuildContext context, AsyncSnapshot<ModelItem> snapshot) {
            if (snapshot.hasData) {
