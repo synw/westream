@@ -1,6 +1,9 @@
 # Westream
 
-Boilerplate code for building streams in Flutter.
+Boilerplate code for building streams in Flutter. Available streams:
+
+- `ListStreamBuilder`
+- `GridStreamBuilder` (wip)
 
 ## Example
 
@@ -11,7 +14,7 @@ Instead of:
    Widget build(BuildContext context) {
       return StreamBuilder<MyModel>(
         stream: this.bloc.items, // any stream
-        builder: (BuildContext context, AsyncSnapshot<MyModel> snapshot) {
+        builder: (BuildContext context, AsyncSnapshot<ModelItem> snapshot) {
            if (snapshot.hasData) {
              return ListView.builder(
                itemCount: snapshot.data.length,
@@ -126,3 +129,7 @@ The ui: `page.dart`:
       }
    }
    ```
+
+## Todo
+
+- [ ] Grid stream builder
