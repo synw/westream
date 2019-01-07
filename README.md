@@ -1,6 +1,6 @@
 # Westream
 
-Boilerplate code for building streams in Flutter. Available streams:
+Boilerplate code for building streams in Flutter. Available stream builders:
 
 - `ListStreamBuilder`
 - `GridStreamBuilder` (wip)
