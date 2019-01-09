@@ -5,7 +5,7 @@ Boilerplate code for building streams in Flutter. Available stream builders:
 - `ListStreamBuilder`
 - `GridStreamBuilder`
 
-## List view builder
+## List stream builder
 
 Instead of:
 
@@ -51,7 +51,7 @@ You can do:
    }
    ```
 
-## Grid view builder
+## Grid stream builder
 
    ```dart
    import 'package:westream/westream.dart';
@@ -60,7 +60,7 @@ You can do:
    Widget build(BuildContext context) {
       return GridStreamBuilder(
          stream: this.bloc.items, // any stream that outputs a list
-         crossAxisCount: 3,
+         crossAxisCount: 3, // optional: defaults to 2
          gridTileBuilder: (ModelItem item) {
             return GridTile(
                title: Text(item.name),
