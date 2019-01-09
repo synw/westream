@@ -43,6 +43,7 @@ You can do:
       return ListStreamBuilder(
          stream: this.bloc.items, // any stream that outputs a list
          listTileBuilder: (ModelItem item) {
+			 // replace ModelItem by the type of your stream items
             return ListTile(
                title: Text(item.name),
             );
@@ -61,7 +62,8 @@ You can do:
       return GridStreamBuilder(
          stream: this.bloc.items, // any stream that outputs a list
          crossAxisCount: 3, // optional: defaults to 2
-         gridTileBuilder: (ModelItem item) {
+         gridTileBuilder: (ModelItem item) { 
+			// replace ModelItem by the type of your stream items
             return GridTile(
                title: Text(item.name),
             );
