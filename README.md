@@ -3,9 +3,9 @@
 Boilerplate code for building streams in Flutter. Available stream builders:
 
 - `ListStreamBuilder`
-- `GridStreamBuilder` (wip)
+- `GridStreamBuilder`
 
-## Example
+## List view builder
 
 Instead of:
 
@@ -44,6 +44,25 @@ You can do:
          stream: this.bloc.items, // any stream that outputs a list
          listTileBuilder: (ModelItem item) {
             return ListTile(
+               title: Text(item.name),
+            );
+         },
+      );
+   }
+   ```
+
+## Grid view builder
+
+   ```dart
+   import 'package:westream/westream.dart';
+
+   @override
+   Widget build(BuildContext context) {
+      return GridStreamBuilder(
+         stream: this.bloc.items, // any stream that outputs a list
+		 crossAxisCount: 3,
+         gridTileBuilder: (ModelItem item) {
+            return GridTile(
                title: Text(item.name),
             );
          },
@@ -130,7 +149,3 @@ The ui: `page.dart`:
       }
    }
    ```
-
-## Todo
-
-- [ ] Grid stream builder
