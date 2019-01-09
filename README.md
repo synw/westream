@@ -60,7 +60,7 @@ You can do:
    Widget build(BuildContext context) {
       return GridStreamBuilder(
          stream: this.bloc.items, // any stream that outputs a list
-		 crossAxisCount: 3,
+         crossAxisCount: 3,
          gridTileBuilder: (ModelItem item) {
             return GridTile(
                title: Text(item.name),
